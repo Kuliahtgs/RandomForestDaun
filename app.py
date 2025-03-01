@@ -128,13 +128,13 @@ if uploaded_file is not None:
     col1, col2, col3 = st.columns(3)
 
     with col1:
-        st.image(citra_resized, caption='Citra Hasil Resize', use_column_width=True)
+        st.image(citra_resized, caption='Citra Hasil Resize', use_container_width=True)
 
     with col2:
-        st.image(masked_grayscale, caption='Citra Hasil Grayscale', use_column_width=True)
+        st.image(masked_grayscale, caption='Citra Hasil Grayscale', use_container_width=True)
 
     with col3:
-        st.image(inverted_mask_morfologi, caption='Citra Hasil Morfologi', use_column_width=True)
+        st.image(inverted_mask_morfologi, caption='Citra Hasil Morfologi', use_container_width=True)
 
     if features_upload: 
         prediction = model_rf.predict([features_upload])
